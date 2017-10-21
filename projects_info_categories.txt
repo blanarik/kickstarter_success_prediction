@@ -8,8 +8,6 @@ pledged_end                  65038 non-null float64
 pledged                      65038 non-null float64
 
 Categorical:
-category                     65038 non-null object
-location                     65038 non-null object
 country                      65038 non-null object
 currency                     65038 non-null object
 currency_symbol              65038 non-null object
@@ -17,11 +15,11 @@ currency_trailing_code       65038 non-null bool
 disable_communication        65038 non-null bool
 state                        65038 non-null object
 spotlight                    65038 non-null bool
-location_end                 65038 non-null object
 disable_communication_end    65038 non-null bool
 spotlight_end                65038 non-null bool
 state_end                    65038 non-null object
-category_end                 65038 non-null object
+staff_pick                   57503 non-null object
+staff_pick_end               61349 non-null object
 
 Project specific:
 blurb                        65038 non-null object
@@ -51,8 +49,12 @@ state_changed_at_end         65038 non-null int64
 launched_at_end              65038 non-null int64
 
 ???
-staff_pick                   57503 non-null object
-staff_pick_end               61349 non-null object
+category                     65038 non-null object json
+location                     65038 non-null object json
+location_end                 65038 non-null object json
+category_end                 65038 non-null object json
+
+Auxiliary for conversion?
 static_usd_rate              65038 non-null float64
 static_usd_rate_end          65038 non-null float64
 
