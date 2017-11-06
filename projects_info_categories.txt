@@ -1,62 +1,118 @@
-Numerical:
+Data columns (total 63 columns):
+
+# Numerical: 9
 backers_count                65038 non-null int64
-goal                         65038 non-null float64
-usd_pledged_end              65038 non-null float64
-usd_pledged                  65038 non-null float64
 backers_count_end            65038 non-null int64
-pledged_end                  65038 non-null float64
+
+goal                         65038 non-null float64
+
 pledged                      65038 non-null float64
+pledged_end                  65038 non-null float64
 
-Categorical:
-country                      65038 non-null object
-currency                     65038 non-null object
-currency_symbol              65038 non-null object
-currency_trailing_code       65038 non-null bool
-disable_communication        65038 non-null bool
-state                        65038 non-null object
-spotlight                    65038 non-null bool
-disable_communication_end    65038 non-null bool
-spotlight_end                65038 non-null bool
-state_end                    65038 non-null object
-staff_pick                   57503 non-null object
-staff_pick_end               61349 non-null object
+usd_pledged                  65038 non-null float64
+usd_pledged_end              65038 non-null float64
 
-Project specific:
-blurb                        65038 non-null object
-creator                      65038 non-null object
-id                           65038 non-null int64
-name                         65038 non-null object
-slug                         65038 non-null object
-name_end                     65038 non-null object
-photo                        65038 non-null object
-profile                      65038 non-null object
-source_url                   65038 non-null object
-urls_end                     65038 non-null object
-urls                         65038 non-null object
-blurb_end                    65036 non-null object
-creator_end                  65038 non-null object
-photo_end                    65038 non-null object
-profile_end                  65038 non-null object
-source_url_end               65038 non-null object
-
-Timestamp:
-created_at                   65038 non-null int64
-scraped_at                   65038 non-null float64
-state_changed_at             65038 non-null int64
-deadline_end                 65038 non-null int64
-scraped_at_end               65038 non-null float64
-state_changed_at_end         65038 non-null int64
-launched_at_end              65038 non-null int64
-
-???
-category                     65038 non-null object json
-location                     65038 non-null object json
-location_end                 65038 non-null object json
-category_end                 65038 non-null object json
-
-Auxiliary for conversion?
 static_usd_rate              65038 non-null float64
 static_usd_rate_end          65038 non-null float64
 
+---------------------------------------------------
 
-dtypes: bool(5), float64(9), int64(8), object(26)
+# Categorical: 25
+category_name                65038 non-null object
+category_name_end            65038 non-null object
+
+category_parent              65038 non-null object
+category_parent_end          65038 non-null object
+
+category_position            65038 non-null int64
+category_position_end        65038 non-null int64
+
+country                      65038 non-null object
+
+currency                     65038 non-null object
+
+currency_symbol              65038 non-null object
+
+currency_trailing_code       65038 non-null bool
+
+disable_communication        65038 non-null bool
+disable_communication_end    65038 non-null bool
+
+location_is_root             65038 non-null bool
+
+location_name                65038 non-null object
+location_name_end            65038 non-null object
+
+location_state               65021 non-null object
+location_state_end           65021 non-null object
+
+location_type                65038 non-null object
+location_type_end            65038 non-null object
+
+spotlight                    65038 non-null bool
+spotlight_end                65038 non-null bool
+
+staff_pick                   57503 non-null object
+staff_pick_end               61349 non-null object
+
+state                        65038 non-null object
+state_end                    65038 non-null object
+
+---------------------------------------------------
+
+# Project specific: 10
+blurb                        65038 non-null object
+blurb_end                    65036 non-null object
+
+creator_name                 65037 non-null object
+creator_name_end             65037 non-null object
+
+id                           65038 non-null int64
+
+name                         65038 non-null object
+name_end                     65038 non-null object
+slug                         65038 non-null object
+
+* Maybe categorical? *
+source_url                   65038 non-null object
+source_url_end               65038 non-null object
+
+---------------------------------------------------
+
+# Timestamps: 7
+created_at                   65038 non-null int64
+
+deadline_end                 65038 non-null int64
+
+launched_at_end              65038 non-null int64
+
+scraped_at                   65038 non-null float64
+scraped_at_end               65038 non-null float64
+
+state_changed_at             65038 non-null int64
+state_changed_at_end         65038 non-null int64
+
+---------------------------------------------------
+
+# JSON: 12
+category                     65038 non-null object
+category_end                 65038 non-null object
+
+creator                      65038 non-null object
+creator_end                  65038 non-null object
+
+location                     65038 non-null object
+location_end                 65038 non-null object
+
+photo                        65038 non-null object
+photo_end                    65038 non-null object
+
+profile                      65038 non-null object
+profile_end                  65038 non-null object
+
+urls                         65038 non-null object
+urls_end                     65038 non-null object
+
+---------------------------------------------------
+
+dtypes: bool(6), float64(9), int64(10), object(38)
