@@ -1,4 +1,29 @@
-Data columns (total 63 columns):
+Data columns (total 68 columns):
+
+
+# Project specific: 13
+blurb                        65038 non-null object
+blurb_end                    65036 non-null object
+
+creator_name                 65037 non-null object
+creator_name_end             65037 non-null object
+
+id                           65038 non-null int64
+
+name                         65038 non-null object
+name_end                     65038 non-null object
+slug                         65038 non-null object
+
+* Maybe categorical? *
+source_url                   65038 non-null object
+source_url_end               65038 non-null object
+
+url_name                     65038 non-null object
+
+urls_url                     65038 non-null object
+urls_url_end                 65038 non-null object
+
+---------------------------------------------------
 
 # Numerical: 9
 backers_count                65038 non-null int64
@@ -60,28 +85,11 @@ state_end                    65038 non-null object
 
 ---------------------------------------------------
 
-# Project specific: 10
-blurb                        65038 non-null object
-blurb_end                    65036 non-null object
-
-creator_name                 65037 non-null object
-creator_name_end             65037 non-null object
-
-id                           65038 non-null int64
-
-name                         65038 non-null object
-name_end                     65038 non-null object
-slug                         65038 non-null object
-
-* Maybe categorical? *
-source_url                   65038 non-null object
-source_url_end               65038 non-null object
-
----------------------------------------------------
-
-# Timestamps: 7
+# Timestamps: 9
 created_at                   65038 non-null int64
+created_at_end               65038 non-null int64
 
+deadline                     65038 non-null int64
 deadline_end                 65038 non-null int64
 
 launched_at_end              65038 non-null int64
@@ -115,4 +123,4 @@ urls_end                     65038 non-null object
 
 ---------------------------------------------------
 
-dtypes: bool(6), float64(9), int64(10), object(38)
+dtypes: bool(6), float64(9), int64(11), object(41)
