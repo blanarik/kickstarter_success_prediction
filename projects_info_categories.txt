@@ -29,6 +29,14 @@ urls_url_end                 65038 non-null object
 backers_count                65038 non-null int64
 backers_count_end            65038 non-null int64
 
+days_duration                65033 non-null int64
+
+days_preparation             65033 non-null int64
+
+days_running                 65033 non-null int64
+
+days_remaining               65033 non-null int64
+
 goal                         65038 non-null float64
 
 pledged                      65038 non-null float64
@@ -87,15 +95,12 @@ state_end                    65038 non-null object
 
 # Timestamps: 9
 created_at                   65038 non-null int64
-created_at_end               65038 non-null int64
 
-deadline                     65038 non-null int64
 deadline_end                 65038 non-null int64
 
-launched_at_end              65038 non-null int64
+launched_at                  65038 non-null int64
 
 scraped_at                   65038 non-null float64
-scraped_at_end               65038 non-null float64
 
 state_changed_at             65038 non-null int64
 state_changed_at_end         65038 non-null int64
