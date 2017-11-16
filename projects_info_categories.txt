@@ -1,3 +1,17 @@
+backers_count
+backers_count_end
+days_duration
+days_preparation
+days_running
+days_remaining
+goal
+pledged
+pledged_end
+usd_pledged
+usd_pledged_end
+
+
+
 Data columns (total 68 columns):
 
 
