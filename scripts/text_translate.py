@@ -17,8 +17,12 @@ class Translator:
 
     def detect_language(self, key_path='private/key.json', in_col='text', verbose=True):
         print(datetime.now())
+        self.df[in_col].fillna(' ', inplace=True)
         client = translate.Client.from_service_account_json(key_path)
         for i in range(self.df.shape[0]):
+            if not pd.isna(self.df.loc[i, 'lang_1']):
+                continue
+
             detected = False
             attempts = 0
             sleep_time = 0.05
