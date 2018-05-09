@@ -1,0 +1,10 @@
+,Algoritmus,Transformácia,S,P_0,P_1,P_2,P_3,Ú_0,Ú_1,Ú_2,Ú_3,F1_makro
+1,GradientBoostingClassifier,nie,0.74,0.85,0.46,0.55,0.8,0.97,0.28,0.59,0.72,0.64
+4,GradientBoostingClassifier,áno,0.74,0.85,0.43,0.54,0.82,0.96,0.27,0.6,0.72,0.64
+3,LogisticRegression,nie,0.73,0.84,0.48,0.53,0.81,0.97,0.3,0.59,0.68,0.64
+7,LinearSVC,áno,0.73,0.84,0.49,0.52,0.76,0.98,0.17,0.56,0.74,0.61
+0,DecisionTreeClassifier,nie,0.72,0.84,0.49,0.49,0.75,0.96,0.28,0.48,0.74,0.62
+5,LogisticRegression,áno,0.72,0.85,0.41,0.52,0.77,0.95,0.23,0.56,0.74,0.62
+8,MLPClassifier,áno,0.71,0.86,0.4,0.49,0.75,0.95,0.23,0.54,0.73,0.61
+6,LinearDiscriminantAnalysis,áno,0.7,0.86,0.35,0.5,0.76,0.92,0.33,0.49,0.72,0.62
+2,KNeighborsClassifier,nie,0.69,0.78,0.38,0.49,0.78,0.98,0.15,0.52,0.66,0.58
