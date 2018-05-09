@@ -8,6 +8,27 @@ from ast import literal_eval
 
 class Translator:
 
+    """
+    With this class, you are able to extract text from scraped website
+    and detect it's language based on first and last 100 characters.
+
+    Usage:
+
+        translator = Translator(file_name)
+
+        # extract text from HTML
+        # use this only for first run
+        translator.extract_text()
+
+        # detect language
+        # only 2 millions characters can be processed daily
+        translator.detect_language()
+
+        # save partly language detected texts
+        translator.save(file_name)
+
+    """
+
     def __init__(self, f_name):
         self.df = pd.read_csv(f_name, encoding='latin', index_col=0)
         print('Number of loaded observations: ' + str(self.df.shape[0]))
@@ -20,8 +41,9 @@ class Translator:
         self.df[in_col].fillna(' ', inplace=True)
         client = translate.Client.from_service_account_json(key_path)
         for i in range(self.df.shape[0]):
-            if not pd.isna(self.df.loc[i, 'lang_1']):
-                continue
+            if 'lang_1' in self.df:
+                if not pd.isna(self.df.loc[i, 'lang_1']):
+                    continue
 
             detected = False
             attempts = 0
@@ -62,39 +84,6 @@ class Translator:
 
         if verbose:
             print('Language detection completed')
-        print(datetime.now())
-
-    def translate_text(self, key_path='private/key.json', in_col='text', out_col='text_en', verbose=True):
-        print(datetime.now())
-        client = translate.Client.from_service_account_json(key_path)
-        for i in range(self.df.shape[0]):
-            translated = False
-            attempts = 0
-            sleep_time = 3
-            while not translated:
-                try:
-                    response = client.translate(self.df.loc[i, in_col], target_language='en')
-                    self.df.loc[i, out_col] = response['translatedText']
-                    self.df.loc[i, 'detected_language'] = response['detectedSourceLanguage']
-                    if i % 100 == 99 and verbose:
-                        print('Number of translated texts so far: ' + str(i+1))
-                    translated = True
-                    sleep(3)
-                except:
-                    print('Exception occurred while translating text #: ' + str(i)) + '  -> Sleep(' + str(sleep_time) + ')'
-                    attempts += 1
-                    sleep(sleep_time)
-                    if attempts > 2:
-                        sleep_time *= 2
-                    if attempts == 10:
-                        client = translate.Client.from_service_account_json(key_path)
-                        sleep_time = 2
-                    if attempts == 13:
-                        print('Limit exceeded')
-                        return
-
-        if verbose:
-            print('Translation completed')
         print(datetime.now())
 
     def save(self, f_name):
